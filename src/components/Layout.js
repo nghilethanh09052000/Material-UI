@@ -7,7 +7,7 @@ import { Typography,
         ListItemIcon , 
         ListItemText,
         AppBar,
-        Toolbar
+        Toolbar,
     } 
 from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -72,10 +72,11 @@ const Layout = ({children}) => {
                 elevation={0}
             >
                 <Toolbar>
-                    <Typography className={classes.date}>
+                   
+                    <Typography className={classes.date}>Todos</Typography>
+                    <Typography >
                         Today is the {format(new Date(), 'do MMMM Y')}
                     </Typography>
-                    <Typography>Todos</Typography>
                 </Toolbar>
             </AppBar>
             <Drawer
