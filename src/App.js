@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes  , Route } from 'react-router-dom'
 import  Notes from './pages/Notes'
 import Create from './pages/Create'
-import { createTheme } from '@mui/system';
+// import { createTheme } from '@mui/system';
 // import { ThemeProvider } from '@mui/styles';
 import makeStyles from '@mui/styles/makeStyles';
 
@@ -33,16 +33,17 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   return (
-      <Layout>
-        <Router>
+      <Router>
+          <Layout>
           <Routes>
             <Route path="/" element={<Notes/>} />
             <Route path="/create" element={<Create
                                                 classes={classes}
                                             />}/>
           </Routes>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
+
  
   );
 }
